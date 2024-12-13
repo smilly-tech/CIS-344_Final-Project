@@ -90,25 +90,25 @@
 
 <?php
 
-// Check if the form is submitted
+//checks if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $date = $_POST['date'];
     $time = $_POST['time'];
     $guests = $_POST['guests'];
 
-    // Insert data into the database
+    //insert data into the database
     $sql = "INSERT INTO reservations (name, date, time, guests) 
             VALUES ('$name', '$date', '$time', '$guests')";
 
-    // Execute the query
+    //execute the query
     $result = $conn->query($sql);
 
-    // Check if the query was successful
+    //check if the query was successful
     if ($result) {
         echo "New reservation created successfully";
     } else {
-        echo "Error executing query: " . $conn->error; // Access error if query fails
+        echo "Error executing query: " . $conn->error; //access error if query fails
     }
 }
 ?>
