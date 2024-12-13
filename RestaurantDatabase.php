@@ -102,7 +102,7 @@ class RestaurantDatabase {
         $result = $this->connection->query($query);
     
         if (!$result) {
-            die("Query failed: " . $this->connection->error); // Error in query
+            die("Query failed: " . $this->connection->error);
         }
     
     
@@ -111,7 +111,7 @@ class RestaurantDatabase {
             $reservations[] = $row;
         }
     
-        // Debugging output
+        //cebugging output
         echo "<pre>";
         print_r($reservations);
         echo "</pre>";
